@@ -25,4 +25,23 @@ class ProblemsTest {
                 () -> assertEquals(0, Problems.reverseInt(0))
         );
     }
+
+    @Test
+    @DisplayName("58. Length of Last Word")
+    void lengthOfLastWord() {
+        assertAll(
+                () -> assertEquals(5, Problems.lengthOfLastWord("Hello World")),
+                () -> assertEquals(4, Problems.lengthOfLastWord("   fly me   to   the moon  ")),
+                () -> assertEquals(6, Problems.lengthOfLastWord("luffy is still joyboy"))
+        );
+    }
+
+    @Test
+    @DisplayName("27. Remove Element")
+    void removeElement() {
+        assertAll(
+                () -> assertEquals(2, Problems.RemoveElement.removeElement(new int[] {3, 2, 2, 3}, 3)),
+                () -> assertEquals(5, Problems.RemoveElement.removeElement(new int[] {0,1,2,2,3,0,4,2}, 2))
+        );
+    }
 }
