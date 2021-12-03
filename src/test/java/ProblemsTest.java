@@ -44,4 +44,16 @@ class ProblemsTest {
                 () -> assertEquals(5, RemoveElement.removeElement(new int[] {0,1,2,2,3,0,4,2}, 2))
         );
     }
+
+    @Test
+    @DisplayName("8. String to Integer (atoi)")
+    void stringToInteger() {
+        assertAll(
+                () -> assertEquals(42, StringToInteger.aToI("42")),
+                () -> assertEquals(-42, StringToInteger.aToI("   -42")),
+                () -> assertEquals(4193, StringToInteger.aToI("4193 with words")),
+                () -> assertEquals(0, StringToInteger.aToI("words and 987")),
+                () -> assertEquals(-2147483648, StringToInteger.aToI("-91283472332"))
+        );
+    }
 }
